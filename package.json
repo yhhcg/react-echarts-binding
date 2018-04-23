@@ -1,7 +1,7 @@
 {
-  "name": "js-component-seed",
+  "name": "react-echarts-binding",
   "version": "0.0.1",
-  "description": "A seed for writing javascript component",
+  "description": "A echarts component",
   "main": "cjs/index.js",
   "scripts": {
     "start": "nodemon --exec yarn run build:dev",
@@ -12,8 +12,8 @@
     "test:watch": "npm test -- --watch",
     "doc": "jsdoc lib -r"
   },
-  "repository": "git@github.com:marcosun/js-component-seed.git",
-  "author": "marcosun <marcoinbristol@gmail.com>",
+  "repository": "git@github.com:yhhcg/react-echarts-binding.git",
+  "author": "yhhcg",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -22,6 +22,7 @@
     "babel-jest": "^22.4.3",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
@@ -33,5 +34,11 @@
   "files": [
     "lib",
     "cjs"
-  ]
+  ],
+  "peerDependencies": {
+    "echarts": "^4.0.4",
+    "material-ui": "^1.0.0-beta.43",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2"
+  }
 }
