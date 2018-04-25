@@ -1,2 +1,2 @@
-# js-component-seed
-This is a seed for creating javascript components. Enjoy writing test-coveraged code.
+# react-echarts-binding
+This is a simple binding for echarts that will be called automatically when container size changes. It is benefit that you only need focus on option changed.
