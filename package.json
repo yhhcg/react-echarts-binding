@@ -1,6 +1,6 @@
 {
   "name": "react-echarts-binding",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A echarts component",
   "main": "cjs/index.js",
   "scripts": {
@@ -38,9 +38,8 @@
   "peerDependencies": {
     "css-element-queries": "^1.0.2",
     "echarts": "^4.0.4",
-    "material-ui": "^1.0.0-beta.43",
+    "@material-ui/core": "^1.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2"
-  },
-  "dependencies": {}
+  }
 }
