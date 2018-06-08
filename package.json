@@ -1,6 +1,6 @@
 {
   "name": "react-echarts-binding",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A echarts component",
   "main": "cjs/index.js",
   "scripts": {
