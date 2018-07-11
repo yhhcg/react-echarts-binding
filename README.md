@@ -1,2 +1,2 @@
 # react-echarts-binding
-This is a simple binding for echarts that will be called automatically when container size changes. It is benefit that you only need focus on option changed.
+This is a declarative echarts binding. It will be updated automatically when container size is changed. So you just have to worry about option prop.
