@@ -40,5 +40,6 @@
     "echarts": "^4.0.4",
     "prop-types": "^15.6.1",
     "react": "^16.3.2"
-  }
+  },
+  "keywords": ["react", "react-echarts", "declarative"]
 }
