@@ -149,7 +149,10 @@ class Echarts extends React.Component {
    * @return {Boolean}
    */
   shouldComponentUpdate(nextProps, nextState) {
-    this.echartsInstance.setOption(nextProps.option);
+    if (this.props.option !== nextProps.option) {
+      this.echartsInstance.setOption(nextProps.option);
+    }
+
     return false;
   }
 
