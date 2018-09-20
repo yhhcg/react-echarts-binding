@@ -15,6 +15,10 @@
   "repository": "git@github.com:yhhcg/react-echarts-binding.git",
   "author": "yhhcg",
   "license": "MIT",
+  "dependencies": {
+    "css-element-queries": "^1.0.2",
+    "prop-types": "^15.6.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -36,9 +40,7 @@
     "cjs"
   ],
   "peerDependencies": {
-    "css-element-queries": "^1.0.2",
     "echarts": "^4.0.4",
-    "prop-types": "^15.6.1",
     "react": "^16.3.2"
   },
   "keywords": ["react", "react-echarts", "declarative"]
