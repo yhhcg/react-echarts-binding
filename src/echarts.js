@@ -1,6 +1,3 @@
-/**
- * @module Echarts
- */
 import React from 'react';
 import {
   object,
@@ -11,7 +8,6 @@ import {
 } from 'prop-types';
 import echarts from 'echarts';
 import ResizeSensor from 'css-element-queries/src/ResizeSensor';
-
 import createEventCallback from './createEventCallback';
 
 /**
@@ -19,55 +15,47 @@ import createEventCallback from './createEventCallback';
  * Echarts HOME{@link http://echarts.baidu.com/}.
  * For echarts events usage please reference to echarts API events paragraph{@link http://echarts.baidu.com/api.html#events}
  * Expose onComplete api to help you to get echarts instance.
- * @param {Object|string} [props.theme] - Echarts.init api parameters. {@link http://echarts.baidu.com/api.html#echarts.init}
- * @param {Object} [props.opts] - Echarts.init api parameters.
- * @param {Object} props.option - Configuration item and data. {@link http://echarts.baidu.com/api.html#echartsInstance.setOption}
- * @param {boolean} [props.notMerge] - EchartsInstance.setOption api parameters.
- * @param {boolean} [props.lazyUpdate] - EchartsInstance.setOption api parameters.
- * @param {boolean} [props.silent] - EchartsInstance.setOption api parameters.
- * @param {function} props.onComplete - Complete callback
- * @param {function} props.onClick - Click callback
- * @param {function} props.onDblClick - Double click callback
- * @param {function} props.onMouseDown - Mouse down callback
- * @param {function} props.onMouseUp - Mouse up callback
- * @param {function} props.onMouseOver - Mouse over callback
- * @param {function} props.onMouseOut - Mouse out callback
- * @param {function} props.onGlobalOut - Global out callback
- * @param {function} props.onLegendSelectChanged - Callback fired after legend selecting state changes.
- * @param {function} props.onLegendSelected - Callback fired after legend is selected.
- * @param {function} props.onLegendUnselected - Callback fired after unselecting legend.
- * @param {function} props.onLegendScroll - Callback fired when trigger legend scroll.
- * @param {function} props.onDataZoom - Callback fired after zooming data area.
- * @param {function} props.onDataRangeSelected - Callback fired after range is changed in visualMap.
- * @param {function} props.onTimeLineChanged - Callback fired after time point in timeline is changed.
- * @param {function} props.onTimeLinePlayChanged - Switching event of play state in timeline.
- * @param {function} props.onRestore - Resets option event.
- * @param {function} props.onDataViewChanged - Changing event of data view tool in toolbox.
- * @param {function} props.onMagicTypeChanged - Switching event of magic type tool in toolbox.
- * @param {function} props.onGeoSelectChanged - Callback fired when geo select is changed.
- * @param {function} props.onGeoSelected - Callback fired when geo is selected.
- * @param {function} props.onGeoUnselected - Callback fired when geo is unselected.
- * @param {function} props.onPieSelectChanged - Callback fired when pie chart selecting state changes.
- * @param {function} props.onPieSelected - Pie chartEvent after selecting.
- * @param {function} props.onPieUnselected - Pie chart cancels selected even
- * @param {function} props.onMapSelectChanged - Callback fired after map region selecting state changes.
- * @param {function} props.onMapSelected - Map regionEvent after selecting.
- * @param {function} props.onMapUnselected - Map region cancels selected event.
- * @param {function} props.onAxisAreaSelected - Selecting event of range of parallel axis.
- * @param {function} props.onFocusNodeAdjacency - Adjacent nodes highlight event in graph.
- * @param {function} props.onUnfocusNodeAdjacency - Adjacent nodes reverse-highlight event in graph.
- * @param {function} props.onBrush - Event triggered after action brush dispatched.
- * @param {function} props.onBrushSelected - This event will be triggered when dispatchAction called, or
- * use do brush behavior. But this event will not be triggered in setOption.
+ * The first argument to all apis is the echarts instance.
  */
 class Echarts extends React.Component {
   static propTypes = {
+    /**
+     * Echarts.init api parameters.
+     * {@link http://echarts.baidu.com/api.html#echarts.init}
+     */
     theme: oneOfType([object, string]),
+    /**
+     * Echarts.init api parameters.
+     * {@link http://echarts.baidu.com/api.html#echarts.init}
+     */
     opts: object,
+    /**
+     * Configuration item and data.
+     * {@link http://echarts.baidu.com/api.html#echartsInstance.setOption}
+     */
     option: object.isRequired,
+    /**
+     * EchartsInstance.setOption api parameters.
+     * {@link http://echarts.baidu.com/api.html#echartsInstance.setOption}
+     */
     notMerge: bool,
+    /**
+     * EchartsInstance.setOption api parameters.
+     * {@link http://echarts.baidu.com/api.html#echartsInstance.setOption}
+     */
     lazyUpdate: bool,
+    /**
+     * EchartsInstance.setOption api parameters.
+     * {@link http://echarts.baidu.com/api.html#echartsInstance.setOption}
+     */
     silent: bool,
+    /**
+     * Event callback.
+     * {@link http://echarts.baidu.com/api.html#events}
+     *
+     * @param {AMap.Map} echarts  - Echarts instance
+     * @param {Object} event      - Echarts event parameters
+     */
     onComplete: func,
     onClick: func,
     onDblClick: func,
