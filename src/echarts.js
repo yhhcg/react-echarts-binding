@@ -10,6 +10,8 @@ import echarts from 'echarts';
 import ResizeSensor from 'css-element-queries/src/ResizeSensor';
 import createEventCallback from './createEventCallback';
 
+const echartsContainerStyle = {width: '100%', height: '100%'};
+
 /**
  * Echarts binding.
  * Echarts HOME{@link http://echarts.baidu.com/}.
@@ -232,13 +234,10 @@ class Echarts extends React.Component {
   render() {
     return (
       <div
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
         ref={(e) => {
           this.echartsDom = e;
         }}
+        style={echartsContainerStyle}
       />
     );
   }
