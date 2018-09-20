@@ -1,5 +1,5 @@
 {
-  "presets": ["./config/babel-preset", "stage-0"],
+  "presets": ["./script/babel-preset", "stage-0"],
   "plugins": [
     "transform-decorators-legacy"
   ]
