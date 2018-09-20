@@ -55,7 +55,7 @@ class Echarts extends React.Component {
      * Event callback.
      * {@link http://echarts.baidu.com/api.html#events}
      *
-     * @param {AMap.Map} echarts  - Echarts instance
+     * @param {Echarts} echarts   - Echarts instance
      * @param {Object} event      - Echarts event parameters
      */
     onComplete: func,
