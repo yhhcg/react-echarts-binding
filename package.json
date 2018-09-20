@@ -1,7 +1,7 @@
 {
   "name": "react-echarts-binding",
   "version": "0.0.5",
-  "description": "A echarts component",
+  "description": "A React binding for echarts",
   "main": "cjs/index.js",
   "scripts": {
     "start": "nodemon --exec yarn run build:dev",
