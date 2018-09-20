@@ -58,7 +58,7 @@ typings/
 .env
 
 # Release path
-cjs
+build
 
 # jsdoc output
 out
