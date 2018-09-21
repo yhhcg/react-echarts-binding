@@ -25,8 +25,7 @@
   "author": "yhhcg",
   "license": "MIT",
   "dependencies": {
-    "css-element-queries": "^1.0.2",
-    "prop-types": "^15.6.1"
+    "css-element-queries": "^1.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
