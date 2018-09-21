@@ -5,11 +5,11 @@ import React from 'react';
 import {hot} from 'react-hot-loader';
 import Echarts from 'react-echarts-binding';
 
-@hot(module)
 /**
  * Export Echarts
  */
-export default class Component extends React.Component {
+@hot(module)
+class Component extends React.Component {
   /**
    * Contstructor function
    * @param {Object} props - Props
@@ -218,3 +218,6 @@ export default class Component extends React.Component {
     );
   }
 }
+
+export default Component;
+
