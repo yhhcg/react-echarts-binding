@@ -96,14 +96,6 @@ class Echarts extends React.Component {
   static defaultProps = {};
 
   /**
-   * @param {Object} props - Props
-   */
-  constructor(props) {
-    super(props);
-    this.props = props;
-  }
-
-  /**
    * Init echarts
    * Set echarts options
    * Bind all events
@@ -128,7 +120,7 @@ class Echarts extends React.Component {
       lazyUpdate,
       silent,
     });
- 
+
     this.eventCallbacks = this.parseEvents();
 
     this.bindEvents(this.echartsInstance, this.eventCallbacks);
