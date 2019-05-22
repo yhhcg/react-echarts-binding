@@ -153,12 +153,20 @@ class Echarts extends React.Component {
    * Destroy echarts instance.
    */
   componentWillUnmount() {
-    this.echartsEventListeners.forEach((listener) => {
-      this.echartsInstance.off(listener);
-    });
+    /**
+     * The echartsEventListeners and echartsInstance variables are assigned
+     * after the component is mounted.
+     * If the component is not inserted into the tree
+     * before the component will unmount, an error will be thrown.
+     */
+    if (this.echartsInstance !== void 0) {
+      this.echartsEventListeners.forEach((listener) => {
+        this.echartsInstance.off(listener);
+      });
 
-    this.echartsInstance.clear();
-    this.echartsInstance.dispose();
+      this.echartsInstance.clear();
+      this.echartsInstance.dispose();
+    }
   }
 
   /**
